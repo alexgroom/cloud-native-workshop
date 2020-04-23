@@ -4,9 +4,9 @@ metadata:
 projects:
   - name: workshop
     source:
-      location: 'https://github.com/mcouliba/cloud-native-workshop.git'
+      location: 'https://github.com/alexgroom/cloud-native-workshop.git'
       type: git
-      branch: "3.1"
+      branch: "4hour"
 components:
   - type: dockerimage
     alias: maven

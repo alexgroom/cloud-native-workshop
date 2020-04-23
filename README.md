@@ -2,7 +2,7 @@
 
 ## Overview
 
-This one day hands-on cloud-native workshops provides developers and introduction to cloud-natives applications
+This 4 hour hands-on cloud-native workshops provides developers and introduction to cloud-natives applications
 and gives them an experience of building cloud-native applications using OpenShift, Eclipse Che7, Spring Boot,
 Quarkus, Vert.x and more.
 
@@ -16,9 +16,6 @@ Quarkus, Vert.x and more.
 * Monitoring Application Health
 * Service Resilience and Fault Tolerance
 * Externalize Application Configuration
-* Building Cloud-Native Pipelines with Tekton
-* Connecting and monitoring microservice applications with Service Mesh
-* Setting up A/B Testing with Service Mesh
 
 ## Deploy the Workshop on RHPDS
 
