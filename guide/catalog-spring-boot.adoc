@@ -252,13 +252,8 @@ image:{% image_path che-runtask.png %}[Che - RunTask, 500]
 image:{% image_path che-catalog-run.png %}[Che - Catalog Run, 500]
 
 When you see **Started CatalogApplication** in the logs, you can access the 
-Catalog REST API.
-
-`*Click on the 'My Workspace' white box in the right menu, then 'User Runtimes' -> 'maven' -> 'localhost-9000'*`.
-
-image:{% image_path che-localhost.png %}[Che - Localhost, 500]
-
-Your browser will be redirect on **your Catalog Service running inside your Workspace**.
+Catalog REST API. You will be asked whether you want to connect to the application and it will launch a browser window 
+inside your workspace.
 
 image:{% image_path catalog-service.png %}[Catalog Service,500]
 

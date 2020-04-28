@@ -175,11 +175,8 @@ image:{% image_path che-runtask.png %}[Che - RunTask, 500]
 
 image:{% image_path che-inventory-compile.png %}[Che - Inventory Development Mode, 500]
 
-Then, `*click on the 'My Workspace' white box in the right menu, then 'User Runtimes' -> 'maven' -> 'localhost-8080'*`.
-
-image:{% image_path che-localhost.png %}[Che - Localhost, 500]
-
-Your browser will be redirect on **your Inventory Service running inside your Workspace**.
+You will be asked whether you want to connect to the application and it will launch a browser window 
+inside your workspace.
 
 image:{% image_path che-quarkus-preview.png %}[Che - Quarkus Preview, 500]
 
