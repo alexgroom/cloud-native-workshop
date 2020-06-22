@@ -1,6 +1,6 @@
 == Microservices with Spring Boot
 
-_45 MINUTE EXERCISE_
+_30 MINUTE EXERCISE_
 
 In this lab you will learn about Spring Boot and how you can build microservices 
 using Spring Boot and JBoss technologies. During this lab, you will create a REST API for 
