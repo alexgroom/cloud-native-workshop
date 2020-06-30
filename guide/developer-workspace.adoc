@@ -83,7 +83,7 @@ Kubernetes resources that make up their application directly from CodeReady Work
 
 Three major benefits:
 
-The new OpenShift Connector 0.1.1 features offer three major benefits:
+The new OpenShift Connector features offer three major benefits:
 
 * Speeds up OpenShift development by supporting fully integrated OpenShift development and deployment within CodeReady Workspaces, 
 which lets you connect to any OpenShift cluster and create, debug, and deploy from the IDE itself.
@@ -137,14 +137,13 @@ Finally, `*enter the following information*`:
 
 |===
 
-You should see 2 projects in the **OpenShift View** as following:
+You should see 1 projects in the **OpenShift View** as following:
 
 image:{% image_path che-openshift-login.png %}[Che - OpenShift View, 300]
 
-* The **'cn-project{{USER_ID}}' project** will be used as a **Staging Environment**.
-* The **'user{{USER_ID}}-che' project** contains your **Developer Workspace** up and running
+If you can see * the **'cn-project{{USER_ID}}' project** it means you have logged into OpenShift correctly.
 
-So, as you can see, you are missing the **Development Environment**. Let's create it!
+But you are missing a working project, the **Development Environment**. Let's create it!
 
 In your {{ CHE_URL }}[Workspace^], from **'OpenShift' View**, 
 `*right-click on the cluster URL and select 'New Project'*`
@@ -184,7 +183,11 @@ list of projects that your user has permission to work with.
 `*Select the 'Developer View' then your 'my-project{{USER_ID}}'*` to be taken to the project overview page
 which will list all of the routes, services, deployments, and pods that you have
 running as part of your project. There's nothing there now, but that's about to
-change.
+change. 
+
+If you see an access error when using the Developer View, it maybe you are trying to view the 'default' Openshift 
+project which you do not have access to. Please use the project drop down at the top of the page to select the 
+project you just created.
 
 image:{% image_path openshift-empty-project.png %}[OpenShift - Empty Project, 700]
 
