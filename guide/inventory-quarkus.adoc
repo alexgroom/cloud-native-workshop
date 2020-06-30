@@ -162,8 +162,10 @@ only one instance of the resource is created and not one per request. You can co
 
 === Enable the Development Mode
 
-**quarkus:dev** runs Quarkus in development mode. This enables hot deployment with background compilation, 
-which means that when you modify your Java files and/or your resource files and refresh your browser, these changes will 
+**quarkus:dev** runs Quarkus in development mode. *You should only ever have to run this task once* since this enables a hot deployment 
+server with background compilation. 
+
+This means that when you modify your Java files and/or your resource files and refresh your browser, the changes will 
 automatically take effect. This works too for resource files like the configuration property file. Refreshing the browser 
 triggers a scan of the workspace, and if any changes are detected, the Java files are recompiled and the application is redeployed; 
 your request is then serviced by the redeployed application. If there are any issues with compilation or deployment an error page 
@@ -177,6 +179,8 @@ image:{% image_path che-inventory-compile.png %}[Che - Inventory Development Mod
 
 You will be asked whether you want to connect to the application and it will launch a browser window 
 inside your workspace.
+
+If a popup asks to access the debug service on port 5005 then just close this dialog.
 
 image:{% image_path che-quarkus-preview.png %}[Che - Quarkus Preview, 500]
 
@@ -280,7 +284,8 @@ public class Inventory implements Serializable {
 
 [NOTE]
 ====
-You don't need to press a save button! Che automatically saves the changes made to the files.
+You don't need to press a save button! Che automatically saves the changes made to the files and the hot
+deployment server will update the running code.
 ====
 
 `*Update 'src/main/resources/applications.properties' file*` to match with the following content:
@@ -352,7 +357,7 @@ The above REST service defines an endpoint that is accessible via **HTTP GET** a
 for example **/api/inventory/329299** with 
 the last path param being the product id which we want to check its inventory status.
 
-`*Refresh your browser and click on 'Test it'*`. You should have the following output:
+`*No need to execute a build, just refresh your browser and click on 'Test it'*`. You should have the following output:
 
 [source,json]
 ----
