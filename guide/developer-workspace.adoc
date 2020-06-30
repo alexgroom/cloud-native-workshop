@@ -137,13 +137,13 @@ Finally, `*enter the following information*`:
 
 |===
 
-You should see 1 projects in the **OpenShift View** as following:
+You should see just 1 project in the **OpenShift View** as following:
 
 image:{% image_path che-openshift-login.png %}[Che - OpenShift View, 300]
 
-If you can see * the **'cn-project{{USER_ID}}' project** it means you have logged into OpenShift correctly.
+If you can see the **'cn-project{{USER_ID}}' project** it means you have logged into OpenShift correctly.
 
-But you are missing a working project, the **Development Environment**. Let's create it!
+But you are missing a working project - the **Development Environment**. Let's create it!
 
 In your {{ CHE_URL }}[Workspace^], from **'OpenShift' View**, 
 `*right-click on the cluster URL and select 'New Project'*`
@@ -185,9 +185,9 @@ which will list all of the routes, services, deployments, and pods that you have
 running as part of your project. There's nothing there now, but that's about to
 change. 
 
-If you see an access error when using the Developer View, it maybe you are trying to view the 'default' Openshift 
-project which you do not have access to. Please use the project drop down at the top of the page to select the 
-project you just created.
+If you see an Access Error when using the Developer View, it maybe you are trying to view the 'default' Openshift 
+project which you do not have access to. Please use the Project drop down at the top of the page to select the 
+'my-project{{USER_ID}}' you just created.
 
 image:{% image_path openshift-empty-project.png %}[OpenShift - Empty Project, 700]
 
