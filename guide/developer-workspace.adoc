@@ -34,22 +34,6 @@ To achieve those core goals, https://access.redhat.com/products/red-hat-coderead
 https://access.redhat.com/products/red-hat-codeready-workspaces[CodeReady Workspaces^]  will provide you an out-of-box 
 *Developer Workspace* with all the tools and the dependencies we need to do the job. **And with only one single click!**
 
-[NOTE]
-.Devfile
-====
-https://access.redhat.com/products/red-hat-codeready-workspaces[CodeReady Workspaces^] uses https://access.redhat.com/products/red-hat-codeready-workspacesdocs/che-7/making-a-workspace-portable-using-a-devfile/[Devfiles^] to automate the provisioning 
-of a specific workspace by defining:
-
-* projects to clone
-* browser IDE to use
-* preconfigured commands
-* tools that you need
-* application runtime definition
-
-Providing a https://github.com/mcouliba/debugging-workshop/blob/master/devfile.yaml[devfile.yaml^] file inside a Git source repository signals to https://access.redhat.com/products/red-hat-codeready-workspaces[CodeReady Workspaces^] to configure the project and runtime according 
-to this file.
-====
-
 `*Click on the below button called 'Developer Workspace'*`
 
 [link={{ CHE_URL }}/dashboard/#/ide/user{{USER_ID}}/wksp-cloud-native]
@@ -77,23 +61,6 @@ image:{% image_path openshiftconnect-logo.png %}[OpenShift Connector logo, 150]
 
 https://marketplace.visualstudio.com/items?itemName=redhat.vscode-openshift-connector[OpenShift Connector^]
 is a Visual Studio (VS) Code extension for interacting with Red Hat OpenShift cluster with more improved features for a seamless developer experience.
-
-Developers can now focus on higher-level abstractions like their application and components and can drill down deeper to get to the OpenShift and 
-Kubernetes resources that make up their application directly from CodeReady Workspaces.
-
-Three major benefits:
-
-The new OpenShift Connector features offer three major benefits:
-
-* Speeds up OpenShift development by supporting fully integrated OpenShift development and deployment within CodeReady Workspaces, 
-which lets you connect to any OpenShift cluster and create, debug, and deploy from the IDE itself.
-* Simplifies inner-loop development for cloud infrastructure, since under the hood this extension uses tools like 
-https://docs.openshift.com/container-platform/4.2/cli_reference/openshift_developer_cli/understanding-odo.html[OpenShift Do (odo)^],
-a fast and simple CLI tool for creating applications on Red Hat OpenShift Container Platform and 
-https://docs.openshift.com/container-platform/4.2/cli_reference/openshift_cli/getting-started-cli.html[OpenShift CLI (oc)^] 
-to help you interact with the local or production OpenShift instance and complete the inner-loop experience.
-* Enhances developer workflow by providing a streamlined developer experience for working with OpenShift instances (3.x or 4.x) 
-and supporting public cloud instances such as Red Hat OpenShift on Azure and AWS.
 
 https://marketplace.visualstudio.com/items?itemName=redhat.vscode-openshift-connector[OpenShift Connector^] on CodeReady Workspaces provides an end-to-end developer experience for interacting with a Red Hat OpenShift cluster. 
 By leveraging the IDE features, developers can create, deploy, and debug applications and then deploy directly to 
@@ -126,13 +93,13 @@ Finally, `*enter the following information*`:
 |Provide cluster URL to connect.
 |https://172.30.0.1:443
 
-|Select username for basic authentication to the API Server
+|Select username
 |$(plus) Add new user...
 
-|Provide Username for basic authentication to the API Server
+|Provide Username
 |user{{USER_ID}}
 
-|Provide Password for basic authentication to the API Server
+|Provide Password
 |{{OPENSHIFT_PASSWORD}}
 
 |===
@@ -167,6 +134,9 @@ Finally, `*enter the following information*`:
 
 === Log in to the OpenShift Developer Console
 
+Now briefly moving away from the CodeReady Workspace IDE, lets see what our work so far has done from the 
+OpenShift perspective.
+
 OpenShift ships with a web-based console that will allow users to
 perform various tasks via a browser.
 
@@ -180,14 +150,13 @@ image::{% image_path developer-console-button.png  %}[Developer Workspace - Butt
 then log in. After you have authenticated to the web console, you will be presented with a
 list of projects that your user has permission to work with. 
 
-`*Select the 'Developer View' then your 'my-project{{USER_ID}}'*` to be taken to the project overview page
-which will list all of the routes, services, deployments, and pods that you have
-running as part of your project. There's nothing there now, but that's about to
-change. 
+`*Select the 'Developer View'*` then your `*'my-project{{USER_ID}}'*` to be taken to 
+the project overview page which will list all components that are part of your project. There's nothing 
+there now, but that's about to change. 
 
-If you see an Access Error when using the Developer View, it maybe you are trying to view the 'default' Openshift 
-project which you do not have access to. Please use the Project drop down at the top of the page to select the 
-'my-project{{USER_ID}}' you just created.
+If you see an *Access Error* when using the Developer View, it maybe you are trying to view the
+'default' Openshift project which you do not have access to. Please use the Project drop down at 
+the top of the page to select the 'my-project{{USER_ID}}' you just created.
 
 image:{% image_path openshift-empty-project.png %}[OpenShift - Empty Project, 700]
 
