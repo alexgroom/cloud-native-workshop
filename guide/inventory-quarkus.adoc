@@ -160,9 +160,9 @@ only one instance of the resource is created and not one per request. You can co
 
 '''
 
-=== Enable the Development Mode
+=== Run the Development Mode build server
 
-**quarkus:dev** runs Quarkus in development mode. *You should only ever have to run this task once* since this enables a hot deployment 
+Now run Quarkus in development mode. *You should only ever have to run this task once* since this enables a hot deployment 
 server with background compilation. 
 
 This means that when you modify your Java files and/or your resource files and refresh your browser, the changes will 
@@ -301,7 +301,7 @@ quarkus.hibernate-orm.log.sql=true
 quarkus.hibernate-orm.sql-load-script=import.sql
 ----
 
-`*Create the 'src/main/resources/import.sql' file`*. Make sure you place it next to the 'applications.properties' file you just edited since there are two *resources* directories very close to each other - you want the higher level one. The SQL contents are as follows:
+`*Update the empty 'src/main/resources/import.sql' file`* so the SQL contents are as follows:
 [source,sql]
 .import.sql
 ----
@@ -384,7 +384,7 @@ An **uber-jar** contains all the dependencies required packaged in the **jar** t
 application with **java -jar**. By default, in Quarkus, the generation of the uber-jar is disabled. 
 To enable it, `*specify an <uberJar> configuration option in your pom.xml*`. 
 
-Add the 'uberJar' entry at `*line 63*` in the file.
+Uncomment the 'uberJar' reference at `*line 63*` in the file so it looks like the snippet below:
 
 [source,shell]
 .pom.xml
@@ -409,7 +409,7 @@ Add the 'uberJar' entry at `*line 63*` in the file.
     </plugins>
 </build>
 ----
-<1> uberJar configuration option at the line 63
+<1> uberJar configuration option
 
 Then, in your {{ CHE_URL }}[Workspace^], `*click on 'Terminal' -> 'Run Task...' ->  'Inventory - Build'*`
 
